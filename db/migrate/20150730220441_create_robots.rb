@@ -3,8 +3,8 @@ class CreateRobots < ActiveRecord::Migration
     create_table :robots do |t|
       t.string :name
       t.string :job
-      t.decimal :height
-      t.decimal :weight
+      t.string :height
+      t.string :weight
       t.string :color
 
       t.timestamps null: false
