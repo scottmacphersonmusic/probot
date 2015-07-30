@@ -5,4 +5,7 @@ class RobotsControllerTest < ActionController::TestCase
     get :index
     assert_response :success
   end
+
+  test "index should " do
+  end
 end

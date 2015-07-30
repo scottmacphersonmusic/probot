@@ -1,2 +1,8 @@
 %h1 ProBot!
 %p An adaptive assistant for any application
+%table
+  %th Name
+  %th Job
+  -@robots.each do |robot|
+    %tr= robot.name
+    %tr= robot.job
