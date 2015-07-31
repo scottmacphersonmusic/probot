@@ -11,6 +11,10 @@ class RobotsController < ApplicationController
     @robot = Robot.new
   end
 
+  def edit
+    @robot = Robot.find(params[:id])
+  end
+
   def create
     @robot = Robot.new(robot_params)
 
