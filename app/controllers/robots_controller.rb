@@ -26,6 +26,24 @@ class RobotsController < ApplicationController
     end
   end
 
+  def update
+    @robot = Robot.find(params[:id])
+
+    if @robot.update(robot_params)
+      flash[:success] = "Robot updated!"
+      redirect_to @robot
+    else
+      render 'edit'
+    end
+  end
+
+  def destroy
+    @robot = Robot.find(params[:id])
+    @robot.destroy
+    flash[:success] = "Robot deleted!"
+    redirect_to robots_path
+  end
+
   private
 
   def robot_params
