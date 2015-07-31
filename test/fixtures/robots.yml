@@ -1,11 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  name: MyString
-  job: MyString
-  height: 9.99
-  weight: 9.99
-  color: MyString
+  name: Alfred
+  job: Butler
+  height: 4.5
+  weight: 72
+  color: White
 
 two:
   name: MyString
