@@ -1,23 +1,28 @@
 - if @robot.errors.any?
   = render 'errors'
 
-= form_for @robot do |f|
-  %p
-    = f.label :name
-    = f.text_field :name
-  %p
-    = f.label :job
-    = f.text_field :job
-  %p
-    = f.label :height
-    = f.text_field :height
-  %p
-    = f.label :weight
-    = f.text_field :weight
-  %p
-    = f.label :color
-    = f.text_field :color
-  %p
+= form_for @robot, role: 'form', class: 'form-horizontal' do |f|
+  .form-group#robot_name
+    = f.label :name, class: 'col-sm-2 control-label'
+    .col-sm-10
+      = f.text_field :name, class: 'form-control'
+  .form-group#robot_job
+    = f.label :job, class: 'col-sm-2 control-label'
+    .col-sm-10
+      = f.text_field :job, class: 'form-control'
+  .form-group#robot_height
+    = f.label :height, class: 'col-sm-2 control-label'
+    .col-sm-10
+      = f.text_field :height, class: 'form-control'
+  .form-group#robot_weight
+    = f.label :weight, class: 'col-sm-2 control-label'
+    .col-sm-10
+      = f.text_field :weight, class: 'form-control'
+  .form-group#robot_color
+    = f.label :color, class: 'col-sm-2 control-label'
+    .col-sm-10
+      = f.text_field :color, class: 'form-control'
+  .btn.btn_success#robot_submit
     = f.submit
-  %p
-    = link_to 'Back', robots_path
+
+.btn.btn_default#back_link_new= link_to 'Back', robots_path
