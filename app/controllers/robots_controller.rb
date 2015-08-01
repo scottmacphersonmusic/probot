@@ -22,6 +22,7 @@ class RobotsController < ApplicationController
       flash[:success] = "Robot created!"
       redirect_to @robot
     else
+      puts @robot.errors
       render 'new'
     end
   end
