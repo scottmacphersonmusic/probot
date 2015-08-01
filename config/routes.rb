@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :robots
+  resources :robots, :attachments
 
   root 'robots#index'
 end
