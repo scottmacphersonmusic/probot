@@ -32,6 +32,13 @@ class RobotsControllerTest < ActionController::TestCase
     assert_equal "Robot created!", flash[:success]
   end
 
+  test "shouldn't create invalid robot" do
+    assert_no_difference('Robot.count') do
+      post :create, robot: { name: "" }
+    end
+    assert_template :new, partial: "_errors"
+  end
+
   test "should get edit" do
     get :edit, id: @robot
     assert_response :success
@@ -45,6 +52,11 @@ class RobotsControllerTest < ActionController::TestCase
     end
     assert_redirected_to robot_path(assigns(:robot))
     assert_equal "Robot updated!", flash[:success]
+  end
+
+  test "shouldn't update invalid robot" do
+    patch :update, id: @robot, robot: { name: "" }
+    assert_template :edit, partial: "_errors"
   end
 
   test "should destroy robot" do
