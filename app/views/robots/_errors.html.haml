@@ -1,5 +1,6 @@
-%h3
-  = "#{pluralize(@robot.errors.count, "error")} prohibited this robot from being saved:"
-%ul
-  - @robot.errors.full_messages.each do |msg|
-    %li= msg
+.panel.panel-danger
+  .panel-heading
+    = "#{pluralize(@robot.errors.count, "error")} prohibited this robot from being saved:"
+  .panel-body
+    - @robot.errors.full_messages.each do |msg|
+      %li= msg

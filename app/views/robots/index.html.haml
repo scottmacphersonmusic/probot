@@ -7,7 +7,7 @@
     %th Job
   -@robots.each do |robot|
     %tr
-      %td= robot.name
+      %td= link_to robot.name, robot_path(robot)
       %td= robot.job
       %td.btn.btn-xs.btn-info= link_to 'Edit', edit_robot_path(robot)
       %td.btn.btn-xs.btn-danger= link_to 'Delete', robot_path(robot),                |
