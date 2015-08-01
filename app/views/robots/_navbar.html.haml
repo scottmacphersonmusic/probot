@@ -1,0 +1,7 @@
+%nav.navbar.navbar-default{role: "navigation"}
+  .navbar-header
+    .navbar-brand= link_to "ProBot", "/"
+  - unless params[:action] == "new"
+    %div
+      %ul.nav.navbar-nav
+        %li.active#new_robot_link= link_to "New Robot", new_robot_path
