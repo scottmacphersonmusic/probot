@@ -1,15 +1,18 @@
-%table
-  %tr
-    %th Name
-    %th Job
-    %th Height
-    %th Weight
-    %th Color
-  %tr
-    %td= @robot.name
-    %td= @robot.job
-    %td= @robot.height
-    %td= @robot.weight
-    %td= @robot.color
-%p
-  = link_to 'Back', robots_path
+.panel.panel-default#name_panel
+  .panel-heading Name
+  .panel-body= @robot.name
+.panel.panel-default
+  .panel-heading Job
+  .panel-body= @robot.job
+.panel.panel-default
+  .panel-heading Height
+  .panel-body= @robot.height
+.panel.panel-default
+  .panel-heading Weight
+  .panel-body= @robot.weight
+.panel.panel-default
+  .panel-heading Color
+  .panel-body= @robot.color
+
+.btn.btn-default#back_link= link_to 'Back', robots_path
+.btn.btn-default= link_to 'Edit', edit_robot_path
