@@ -19,3 +19,7 @@ gem 'sqlite3', '1.3.10'
 group :development, :test do
   gem 'web-console', '~> 2.0'
 end
+
+group :production do
+  gem 'pg', '0.18.2'
+end
