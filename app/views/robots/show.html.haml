@@ -6,10 +6,10 @@
   .panel-body= @robot.job
 .panel.panel-default
   .panel-heading Height
-  .panel-body= @robot.height
+  .panel-body= @robot.height.to_s + " ft"
 .panel.panel-default
   .panel-heading Weight
-  .panel-body= @robot.weight
+  .panel-body= @robot.weight.to_s + " lbs"
 .panel.panel-default
   .panel-heading Color
   .panel-body= @robot.color
